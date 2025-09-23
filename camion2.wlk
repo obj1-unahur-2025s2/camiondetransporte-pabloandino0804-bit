@@ -1,4 +1,4 @@
-import cosas.*
+import cosas2.*
 object camion {
     const property carga = []
     const peso = 1000

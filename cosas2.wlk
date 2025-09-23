@@ -1,4 +1,4 @@
-import camion.*
+import camion2.camion.*
 object knightRider {
     method peso() = 500
 
