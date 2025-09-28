@@ -1,7 +1,6 @@
 import cosas.*
 object camion {
     const property carga = []
-    const peso = 1000
 
     method cargar(unObjeto) {
         carga.add(unObjeto)
@@ -11,7 +10,7 @@ object camion {
         carga.remove(unObjeto)
     }
 
-    method pesoTotal() = peso + carga.sum{objeto => objeto.peso()}
+    method pesoTotal() = 1000 + carga.sum{objeto => objeto.peso()}
 
     method tieneTodoPar() {
         return carga.all({objeto => objeto.peso().even()})

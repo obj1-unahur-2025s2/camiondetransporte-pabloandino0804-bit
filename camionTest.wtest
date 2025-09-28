@@ -1,20 +1,27 @@
 import camion.*
 import cosas.*
 
-describe "Ladrillos" {
-  test "su nivel de peligrosidad es 2" {
-    assert.equals(2, paqueteDeLadrillos.nivelPeligrosidad())
-  }
+describe "Camion" {
 
-  test "su peso es de 100 cuando tiene una cantidad de 50"{
-    paqueteDeLadrillos.cantidad(50)
-    assert.equals(100, paqueteDeLadrillos.peso())
-  }
-}
-
-describe "Embalaque de seguridad" {
   test "hay uno que tiene 150kg" {
     assert.that(camion.hayObjetoConPeso(150))
   }
 
+  test "Multiple prueba" {
+    camion.cargar(bumblebee)
+    assert.that(camion.carga().contains(bumblebee))
+    arenaAGranel.peso(150)
+    camion.cargar(arenaAGranel)
+    paqueteDeLadrillos.cantidad(80)
+    embalaqueDeSeguridad.contenido().add(paqueteDeLadrillos)
+    camion.cargar(embalaqueDeSeguridad)
+    assert.that(embalaqueDeSeguridad.contenido().contains(paqueteDeLadrillos))
+    assert.equals(160, paqueteDeLadrillos.peso())
+    bateriaAntiaérea.cargarMisiles()
+    camion.cargar(bateriaAntiaérea)
+    assert.equals(100, bateriaAntiaérea.nivelPeligrosidad())
+    assert.equals(camion.objetoMasPesado(), bumblebee)
+  }
+
 }
+
