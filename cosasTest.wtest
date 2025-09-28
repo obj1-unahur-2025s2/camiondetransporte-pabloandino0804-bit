@@ -1,15 +1,15 @@
 import cosas.*
 
 describe "Embalaque y contenedor" {
-  test " El embalaqueguarda reciduos radiactivos de 90" {
-    residuosRadioactivos.peso(90)
+  test " El embalaque de seguridad guarda los residuos radioactivos de 30kg" {
+    residuosRadioactivos.peso(30)
     embalaqueDeSeguridad.contenido().add(residuosRadioactivos)
-    assert.equals(90,residuosRadioactivos.peso())
+    assert.equals(30,residuosRadioactivos.peso())
     assert.that(embalaqueDeSeguridad.contenido().contains(residuosRadioactivos))
   }
 
   test "El contenedor guarda 3 cosas a eleccion" {
-    contenedorPorturario.contenido().addAll([residuosRadioactivos, paqueteLadrillos, knightRider])
+    contenedorPorturario.contenido().addAll([residuosRadioactivos, paqueteDeLadrillos, bateriaAntiaérea])
     assert.equals(3, contenedorPorturario.contenido().size())
   }
 }

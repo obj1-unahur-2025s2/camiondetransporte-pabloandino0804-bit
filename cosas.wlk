@@ -68,7 +68,7 @@ object bateriaAntiaérea {
     }
 }
 
-object contenetorPorturario{
+object contenedorPorturario{
     const property contenido = []
 
     method agregarContedio(unObjeto) {
