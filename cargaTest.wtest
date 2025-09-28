@@ -21,9 +21,9 @@ describe "Consecuencias de carga" {
   }
 
   test "El contenedor porturario hace que reaccione cada una de las cosas que tiene adentro"{
-    contenedorPorturario.addAll([residuosRadioactivos, paqueteDeLadrillos, bateriaAntiaérea])
+    contenedorPorturario.contenido().addAll([residuosRadioactivos, paqueteDeLadrillos, bateriaAntiaérea])
     camion.cargar(contenedorPorturario)
-    assert.equals(15, residuosRadiactivos.peso())
+    assert.equals(15, residuosRadioactivos.peso())
     assert.equals(24, paqueteDeLadrillos.peso())
     assert.equals(100, bateriaAntiaérea.nivelPeligrosidad())
   }

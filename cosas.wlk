@@ -71,7 +71,7 @@ object bateriaAntiaérea {
 object contenedorPorturario{
     const property contenido = []
 
-    method agregarContedio(unObjeto) {
+    method agregarContenido(unObjeto) {
         contenido.add(unObjeto)
     }
 
@@ -95,7 +95,7 @@ object  residuosRadioactivos {
 object embalaqueDeSeguridad {
     const property contenido = []
 
-    method agregarContedio(unObjeto) {
+    method agregarContenido(unObjeto) {
         contenido.add(unObjeto)
     }
 

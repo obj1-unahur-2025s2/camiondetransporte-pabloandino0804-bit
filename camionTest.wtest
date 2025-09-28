@@ -3,17 +3,14 @@ import cosas.*
 
 describe "Camion" {
 
-  test "hay uno que tiene 150kg" {
-    assert.that(camion.hayObjetoConPeso(150))
-  }
-
   test "Multi prueba" {
     camion.cargar(bumblebee)
     assert.that(camion.carga().contains(bumblebee))
     arenaAGranel.peso(150)
     camion.cargar(arenaAGranel)
+    assert.that(camion.hayObjetoConPeso(150))
     paqueteDeLadrillos.cantidad(80)
-    embalaqueDeSeguridad.contenido().add(paqueteDeLadrillos)
+    embalaqueDeSeguridad.agregarContenido(paqueteDeLadrillos)
     camion.cargar(embalaqueDeSeguridad)
     assert.that(embalaqueDeSeguridad.contenido().contains(paqueteDeLadrillos))
     assert.equals(160, paqueteDeLadrillos.peso())

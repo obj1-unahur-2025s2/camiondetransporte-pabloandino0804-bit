@@ -7,4 +7,9 @@ describe "Bultos"{
         assert.equals(1, arenaAGranel.totalBultos())
         assert.equals(1, residuosRadioactivos.totalBultos())
     }
+
+    test "cosas que tienen 2 bultos"{
+        assert.equals(2, bumblebee.totalBultos())
+        assert.equals(2, embalaqueDeSeguridad.totalBultos())
+    }
 }
