@@ -7,7 +7,7 @@ describe "Camion" {
     assert.that(camion.hayObjetoConPeso(150))
   }
 
-  test "Multiple prueba" {
+  test "Multi prueba" {
     camion.cargar(bumblebee)
     assert.that(camion.carga().contains(bumblebee))
     arenaAGranel.peso(150)

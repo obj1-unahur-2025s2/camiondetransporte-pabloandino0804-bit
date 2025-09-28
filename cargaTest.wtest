@@ -1,3 +1,30 @@
 import camion2.*
 import cosas2.*
 
+describe "Consecuencias de carga" {
+  test "cuando el camion carga bumblebee como auto se transforma en robot teniendo un nivel de peligro de 300" {
+    bumblebee.cambiarForma()
+    camion.cargar(bumblebee)
+    assert.equals(300,bumblebee.nivelPeligrosidad())
+  }
+
+  test "arena a grane pierde 10 kilos a ser cargado"{
+    arenaAGranel.peso(300)
+    camion.cargar(arenaAGranel)
+    assert.equals(290, arenaAGranel.peso())
+  }
+
+  test "la bateria tendra los misiles cargados cuando el camion lo carga"{
+    camion.cargar(bateriaAntiaérea)
+    assert.equals(100, bateriaAntiaérea.nivelPeligrosidad())
+    assert.equals(300, bateriaAntiaérea.peso())
+  }
+
+  test "El contenedor porturario hace que reaccione cada una de las cosas que tiene adentro"{
+    contenedorPorturario.addAll([residuosRadioactivos, paqueteDeLadrillos, bateriaAntiaérea])
+    camion.cargar(contenedorPorturario)
+    assert.equals(15, residuosRadiactivos.peso())
+    assert.equals(24, paqueteDeLadrillos.peso())
+    assert.equals(100, bateriaAntiaérea.nivelPeligrosidad())
+  }
+}

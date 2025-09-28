@@ -30,7 +30,7 @@ object bumblebee {
     method totalBultos() = 2
 
     method consecuencia() {
-        self.cambiarForma()
+        estaComoAuto = false
     }
 }
 
@@ -119,7 +119,7 @@ object bateriaAntiaérea {
     }
 }
 
-object contenetorPorturario{
+object contenedorPorturario{
     const property contenido = []
 
     method agregarContedio(unObjeto) {

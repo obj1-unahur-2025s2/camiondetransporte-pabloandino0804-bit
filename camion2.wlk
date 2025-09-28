@@ -40,4 +40,6 @@ object camion {
     method tieneAlgoEntreValores(valorMin, valorMax) = carga.any{objeto => objeto.peso().between(valorMin, valorMax)}
 
     method objetoMasPesado() = carga.max{objeto => objeto.peso()}
+
+    method cantDeBultos() = carga.sum{objeto => objeto.totalBultos()}
 }
