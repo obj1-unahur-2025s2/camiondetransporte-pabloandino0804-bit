@@ -32,7 +32,7 @@ object camion {
 
     method excedeElPesoMaximo() = self.pesoTotal() > 2500
 
-    method puedeCircularUnaRuta(nivelDePeligrosidad) = !self.excedeElPesoMaximo() and self.cosasQuesuperanElNivelDePeligrosidad(nivelDePeligrosidad) == 0
+    method puedeCircularUnaRuta(nivelDePeligrosidad) = !self.excedeElPesoMaximo() and self.cosasQuesuperanElNivelDePeligrosidad(nivelDePeligrosidad).size() == 0
 
     method laPeligrosidadTotalEsMayor(unValor) = carga.sum{objeto => objeto.nivelPeligrosidad()} > unValor
 

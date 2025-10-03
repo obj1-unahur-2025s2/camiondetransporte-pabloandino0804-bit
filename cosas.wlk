@@ -8,6 +8,8 @@ object knightRider {
 object bumblebee {
     var estaComoAuto = false
 
+    method estaComoAuto() = estaComoAuto
+    
     method cambiarForma(){
         estaComoAuto = !estaComoAuto
     }
@@ -48,6 +50,8 @@ object bateriaAntiaérea {
     method descargarMisiles() {
         tieneMisiles = false
     }
+
+    method tieneMisiles() = tieneMisiles
 
     method peso() {
         if (tieneMisiles) {
