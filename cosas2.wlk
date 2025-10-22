@@ -36,36 +36,21 @@ object bumblebee {
 
 object paqueteDeLadrillos {
     var property cantidad = 0
-    var bultos = 1
 
     method peso() = 2 * cantidad
 
     method nivelPeligrosidad() = 2
 
     method totalBultos(){
-        return bultos
-    }
-    
-    method cabiarBultosA1() {
         if (cantidad.min(100)){
-            bultos = 1
+            return 1
         }
-    }
-
-    method cambiarBultosA2() {
-        if (cantidad.between(101, 300)){
-            bultos = 2
-        } 
-    }
-
-    method cambiarBultosA3() {
-        if (cantidad > 300){
-            bultos = 3
+        else if (cantidad.between(101, 300)){
+            return 2
         }
-    }
-
-    method consecuencia() {
-        cantidad = cantidad + 12
+        else {
+            return 3
+        }
     }
 }
 
